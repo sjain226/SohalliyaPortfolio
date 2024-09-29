@@ -1,17 +1,17 @@
 {
   "name": "sohalliya-portfolio",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "homepage": "https://sjain226.github.io/SohalliyaPortfolio",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "predeploy": "vite build", 
-  "deploy": "gh-pages -d dist"  
-}
+    "dev": "vite",
+    "build": "vite build", 
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  }
 ,
   "dependencies": {
     "framer-motion": "^11.5.5",
