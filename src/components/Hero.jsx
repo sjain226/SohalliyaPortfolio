@@ -15,7 +15,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center py-20 lg:py-28 lg:flex-row lg:justify-center lg:space-x-16 bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300">
+    <div className="w-full h-full mx-0 px-0 flex flex-col justify-center items-center text-center bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300">
       {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}

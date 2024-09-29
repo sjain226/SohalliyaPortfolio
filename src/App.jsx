@@ -8,40 +8,40 @@ import Contact from "./components/contact";
 
 function App() {
   return (
-    <div>
-      <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-      <div className="overflow-x-hidden text-neutral-900 antialiased selection:bg-cyan-300 selection:text-cyan-800">
+    <div className="overflow-x-hidden text-neutral-900 antialiased selection:bg-cyan-300 selection:text-cyan-800">
+      {/* Fixed Navbar */}
+      <Navbar />
 
-          <Navbar />
-          <div className="container mx-auto px-8">
-            <Hero />
-            
-            {/* Add scroll-margin-top to the About section */}
-            <div id="about" className="scroll-mt-20">
-              <About />
-            </div>
-            
-            <Technologies />
-            
-            {/* Add scroll-margin-top to the Experience section */}
-            <div id="experience" className="scroll-mt-20">
-              <Experience />
-            </div>
-            
-            {/* Add scroll-margin-top to the Projects section */}
-            <div id="projects" className="scroll-mt-20">
-              <Projects />
-            </div>
-            
-            {/* Add scroll-margin-top to the Contact section */}
-            <div id="contact" className="scroll-mt-20">
-              <Contact />
-            </div>
-          </div>
+      {/* Full-screen Hero Section */}
+      <div className="min-h-screen w-screen flex items-center justify-center bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300">
+        <Hero />
       </div>
 
+        {/* About Section */}
+        <div id="about" className="h-full w-full">
+          <About />
+        </div>
+
+        {/* Technologies Section */}
+        <div className="h-full w-full">
+          <Technologies />
+        </div>
+
+        {/* Experience Section */}
+        <div id="experience" className="h-full w-full">
+          <Experience />
+        </div>
+
+        {/* Projects Section */}
+        <div id="projects" className="h-full w-full">
+          <Projects />
+        </div>
+
+        {/* Contact Section */}
+        <div id="contact" className="h-full w-full">
+          <Contact />
+        </div>
     </div>
-  
   );
 }
 

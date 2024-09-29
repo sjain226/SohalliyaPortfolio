@@ -8,8 +8,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full py-6 px-8 flex justify-center bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300">
-      <nav className="w-full max-w-screen-lg flex justify-between items-center">
+    // Make the navbar fixed at the top
+    <div className="w-full py-6 px-8 fixed top-0 left-0 z-50 bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300 shadow-md">
+      <nav className="w-full max-w-screen-lg flex justify-between items-center mx-auto">
         {/* Left Section (Name or Logo) */}
         <div className="text-3xl font-bold text-purple-700">
           SJ 🎀

@@ -52,7 +52,6 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Post-Stroke Recovery Application",
-    image: project1,
     type: "Web Development",
     description: [
       `Developed a web application using HTML, CSS, and JavaScript that employs gamification to aid in the rehabilitation of stroke victims.`,
@@ -62,7 +61,6 @@ export const PROJECTS = [
   },
   {
     title: "Book Review Web Application",
-    image: project2,
     type: "Full Stack Web Development",
     description: [
       `Designed a full-stack web application with Node.js, React.js, and PostgreSQL to manage and display personal book reviews.`,
@@ -72,7 +70,6 @@ export const PROJECTS = [
   },
   {
     title: "Flight Router",
-    image: project3,
     type: "Algorithm Design and Implementation",
     description: [
       `Revolutionized a Java application that analyzes airport data to compute the shortest routes and flight connections, enhancing travel planning efficiency.`,
@@ -82,7 +79,6 @@ export const PROJECTS = [
   },
   {
     title: "Movie Timer",
-    image: project4,
     type: "Java Application Development",
     description: [
       `Implemented a movie timer app with a Java backend, utilizing a Red-Black Tree to manage and access movie data efficiently.`,
