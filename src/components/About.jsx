@@ -104,7 +104,7 @@ const About = () => {
             <FaUsers className="text-6xl text-green-400 mb-4" />
             <h3 className="text-3xl font-semibold text-purple-500 mb-2">Clubs & Activities ✨</h3>
             <p className="text-gray-600 text-justify">
-              🌟 Volunteered as a mentor for beginner programmers, fostering a supportive learning environment. 🌟 Organized coding workshops to introduce peers to the basics of web development. 🌟 Active member of Optima Dance. 🌟 To-be Member of The Vault UW-MADISON. 🌟<br />
+              🌟 Website Director of The Vault UW-Madison. 🌟 Volunteered as a mentor for intermediate programmers, fostering a supportive learning environment. 🌟 Organized coding workshops to introduce peers to the basics of web development. 🌟 Active member of Optima Dance Team. 🌟<br />
             </p>
           </motion.div>
         </div>
