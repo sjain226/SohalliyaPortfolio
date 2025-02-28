@@ -51,7 +51,13 @@ const Experience = () => {
               </span>
 
               {/* Description */}
-              <p className="mb-4 text-gray-600">{experience.description.join(" ")}</p>
+              <p className="mb-4 text-gray-600">
+                <ul>
+                  {experience.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </p>
 
               {/* Technologies Used */}
               <div className="flex flex-wrap">

@@ -50,12 +50,12 @@ const Hero = () => {
         {/* Call to Action Buttons */}
         <div className="mt-10 space-x-4">
           <a
-            href="https://drive.google.com/file/d/1ztVFGQ2Cx0DAdvxA1TyzMEtHZb3ZZj9x/view?usp=sharing"
+            href="https://drive.google.com/file/d/1eNwZCvBwuPjTjAmrMH2aHIfAXv5S9mrJ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 border-2 border-pink-600 rounded-full font-semibold hover:bg-pink-100 text-pink-600 transition-colors"
+            className="px-8 py-4 bg-pink-600 text-white rounded-full font-semibold hover:bg-pink-500 transition-colors"
           >
-            Download CV
+           Resume
           </a>
           <a
             href="#contact"
@@ -71,9 +71,9 @@ const Hero = () => {
             href="https://www.linkedin.com/in/sohalliya-jain/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 transition-colors"
+            // className="hover:text-pink-500 transition-colors"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-4xl text-blue-600 mb-2" />
           </a>
         </div>
       </motion.div>

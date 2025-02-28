@@ -37,7 +37,13 @@ const Projects = () => {
                 {project.title}
               </h6>
               <p className="mb-2 text-lg text-pink-500">{project.type}</p>
-              <p className="mb-4 text-neutral-600">{project.description.join(" ")}</p>
+              <p className="mb-4 text-neutral-600">
+              <ul>
+                  {project.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </p>
 
               {/* Technologies Used */}
               <div className="flex flex-wrap">
