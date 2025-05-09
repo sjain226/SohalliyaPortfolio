@@ -8,12 +8,12 @@ export const EXPERIENCES = [
     role: "Software Engineering Intern",
     company: "Holos",
     description: [
-      "~ Created an AR/VR office hours platform for Apple Vision Pro using Swift, visionOS, SharePlay, and WebXR, targeting a 30% increase in student engagement and accessibility.",
+      "~ Created an AR/VR office hours platform for Apple Vision Pro using Swift, visionOS, SharePlay.",
       "~ Integrated collaboration tools like a whiteboard, screen capture, video sharing, and 360° model viewing to enhance the immersive learning experience.",
-      "~ Enabled meeting recording (audio/video) with ReplayKit and integrated Firebase for cloud storage, ensuring seamless content retrieval and sharing.",
-      "~ Developed a Swift script using URLSession to integrate ChatGPT and WhisperGPT for real-time speech-to-text, improving accessibility and engagement."
+      "~ Enabled immersive session recording (audio and screen) using AVFoundation, with real-time status feedback.",
+      "~ Engineered real-time conversational AI using OpenAI (ChatGPT for dialogue, Whisper for speech-to-text), AVFoundation, and Apple’s Speech framework, enabling natural voice interaction."
     ],
-    technologies: ["Swift", "visionOS", "SharePlay", "WebXR", "ReplayKit", "Firebase", "ChatGPT", "WhisperGPT"]
+    technologies: ["Swift", "visionOS", "SharePlay", "ReplayKit", "OpenAI", "AVFoundation"]
   },
   {
       year: "October 2024 - Present",
@@ -31,10 +31,10 @@ export const EXPERIENCES = [
       role: "Full-Stack Software Engineering Intern",
       company: "Handshake",
       description: [
-        "~ Engineered a GenAI-powered tone enhancement tool leveraging Python, React, and TypeScript, enhancing real-time profile summary personalization for millions of U.S. users.",
-        "~ Boosted feature adoption to 70%+ and increased AI-generated summaries by 50%, leading to a planned expansion in Europe.",
-        "~ Led QA testing and conducted user research to refine UI/UX, ensuring accessibility and responsiveness across devices.",
-        "~ Optimized LLM/GenAI response times through scalable architecture and refactored API endpoints using Go, Ruby, and GraphQL, improving performance and reducing latency."
+        "~ Engineered Coco, a GenAI-powered tone enhancement tool, leveraging Python, React, and TypeScript improving real-time profile summary personalization for millions of U.S. users.",
+        "~ Boosted feature adoption to 70%+ and scaled AI summaries by 50%, driving a planned expansion in Europe.",
+        "~ Led QA testing and user research to refine UI/UX, ensuring accessibility, responsiveness, and secure data handling across browsers and devices.",
+        "~ Optimized LLM/GenAI responses via scalable architecture and refactored API endpoints using Go, Ruby, and GraphQL, refining performance while reducing latency "
       ],
       technologies: ["Python", "React", "TypeScript", "Go", "Ruby", "GraphQL"]
   },
@@ -82,7 +82,7 @@ export const PROJECTS = [
     ]
   },
   {
-    title: "NetsBets",
+    title: "Nets and Bets",
     technologies: ["Java", "Spring Boot", "SQL", "React"],
     description: [
         "⭑ Assembled a full-stack Java betting platform with a Spring Boot backend, React frontend, and SQL database.",
@@ -93,11 +93,11 @@ export const PROJECTS = [
   {
     title: "Sonic Study",
     description: [
-      `⭑ Revolutionized an accessibility-focused flashcard application using Kotlin, Room Database, and Microsoft Azure to support users with visual impairments or dyslexia, providing an innovative audio-based study solution.`,
-      `⭑ Executed core features such as voice-based input and question-answer pairing using Web Speech API, enhancing the user experience through seamless audio interactions.`,
-      `⭑ Led user testing and feedback sessions, resulting in a 20% increase in user satisfaction with app usability and audio clarity.`
+      `⭑ Revolutionized an accessibility-focused flashcard application using Kotlin, AWS, Python and Flask to support users with visual impairments or dyslexia, providing an innovative audio-based study solution.`,
+      `⭑ Executed core features such as voice-based input and question-answer pairing using Web Speech API, enhancing the user experience through seamless audio interactions.`
+
     ],
-    technologies: [`Kotlin`, `Room Database`, `Microsoft Azure`, `Web Speech API`]
+    technologies: [`Kotlin`, `AWS`, `Python`, `Flask`, `Web Speech API`]
   },
   {
     title: "Post-Stroke Recovery Application",
