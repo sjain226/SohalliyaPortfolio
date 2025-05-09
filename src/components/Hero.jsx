@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Call to Action Buttons */}
         <div className="mt-10 space-x-4">
           <a
-            href="https://drive.google.com/file/d/1eNwZCvBwuPjTjAmrMH2aHIfAXv5S9mrJ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1LCMe0ZgYC6yGA3YYuJ3B6-UU7CAXrz4Y/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-pink-600 text-white rounded-full font-semibold hover:bg-pink-500 transition-colors"
