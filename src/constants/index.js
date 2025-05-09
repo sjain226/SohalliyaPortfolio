@@ -83,11 +83,11 @@ export const PROJECTS = [
   },
   {
     title: "Nets and Bets",
-    technologies: ["Java", "Spring Boot", "SQL", "React"],
+    technologies: ["Java Spring Boot", "SQL", "React"],
     description: [
-        "⭑ Assembled a full-stack Java betting platform with a Spring Boot backend, React frontend, and SQL database.",
-        "⭑ Formulated REST APIs for betting, authentication using Spring Security, and real-time updates using WebSockets.",
-        "⭑ Integrated external sports data APIs for live scores and game schedules."
+        "⭑ Built a full-stack March Madness betting simulation platform using React.js, Java Spring Boot, and MySQL.",
+        "⭑ Developed RESTful APIs for user authentication, betting logic, and game data, and designed and optimized the database for user profiles, team stats, and betting history.",
+        "⭑ Created web scraping system to pull live game stats and odds"
     ]
   },
   {
