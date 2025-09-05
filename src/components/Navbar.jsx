@@ -37,17 +37,17 @@ const Navbar = () => {
           : "bg-gray-900/20 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center border border-green-400">
-              <span className="text-white font-bold text-lg font-mono">SJ</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 rounded-full flex items-center justify-center border border-green-400">
+              <span className="text-white font-bold text-sm sm:text-lg font-mono">SJ</span>
             </div>
-            <span className={`text-xl font-bold font-mono ${
+            <span className={`text-lg sm:text-xl font-bold font-mono ${
               scrolled ? "text-white" : "text-white"
             }`}>
               Sohalliya
@@ -91,7 +91,7 @@ const Navbar = () => {
             }`}
           >
             <motion.svg
-              className="w-6 h-6"
+              className="w-5 h-5 sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -122,7 +122,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700"
           >
-            <div className="px-6 py-4 space-y-4">
+            <div className="px-4 sm:px-6 py-4 space-y-3 sm:space-y-4">
               {navItems.map((item, index) => (
                 <motion.a
                   key={item.name}

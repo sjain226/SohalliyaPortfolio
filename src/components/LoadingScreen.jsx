@@ -66,7 +66,7 @@ const LoadingScreen = ({ onComplete }) => {
           className="fixed inset-0 bg-gray-900 flex flex-col items-center justify-center z-50"
         >
           {/* Terminal Window */}
-          <div className="bg-gray-800 rounded-lg shadow-2xl border border-gray-700 w-96 max-w-[90vw] p-6">
+          <div className="bg-gray-800 rounded-lg shadow-2xl border border-gray-700 w-80 sm:w-96 max-w-[90vw] p-4 sm:p-6">
             {/* Terminal Header */}
             <div className="flex items-center mb-4">
               <div className="flex space-x-2">
@@ -75,12 +75,12 @@ const LoadingScreen = ({ onComplete }) => {
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
               <div className="flex-1 text-center">
-                <span className="text-gray-300 text-sm font-mono">loading-sohalliya-portfolio</span>
+                <span className="text-gray-300 text-xs sm:text-sm font-mono">loading-sohalliya-portfolio</span>
               </div>
             </div>
 
             {/* Terminal Content */}
-            <div className="font-mono text-sm space-y-4">
+            <div className="font-mono text-xs sm:text-sm space-y-3 sm:space-y-4">
               {/* Loading Message */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}

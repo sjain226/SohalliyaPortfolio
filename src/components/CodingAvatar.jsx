@@ -33,7 +33,7 @@ const CodingAvatar = ({ isVisible = true }) => {
   }, []);
 
   return (
-    <div className="relative w-80 h-80 mx-auto">
+    <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto">
       {/* Avatar Container */}
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
@@ -128,7 +128,7 @@ const CodingAvatar = ({ isVisible = true }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-16 bg-gray-900 rounded-lg border border-green-400 p-2"
+            className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 w-28 sm:w-32 h-12 sm:h-16 bg-gray-900 rounded-lg border border-green-400 p-1.5 sm:p-2"
           >
             <div className="flex items-center mb-1">
               <div className="flex space-x-1">
@@ -137,7 +137,7 @@ const CodingAvatar = ({ isVisible = true }) => {
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               </div>
             </div>
-            <div className="text-green-400 text-xs font-mono">
+            <div className="text-green-400 text-xs sm:text-xs font-mono">
               <motion.span
                 key={currentCode}
                 initial={{ opacity: 0 }}

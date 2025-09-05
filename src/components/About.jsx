@@ -13,19 +13,19 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-mono">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 font-mono">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto px-4 sm:px-0">
             A journey through technology, innovation, and continuous learning
           </p>
         </motion.div>
@@ -35,22 +35,22 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-12 sm:mb-16 lg:mb-20"
         >
-          <div className="bg-gray-800 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto border border-gray-700">
+          <div className="bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto border border-gray-700">
             <div className="text-center">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4 border border-green-400">
-                  <FaBrain className="text-white text-xl" />
+              <div className="flex items-center justify-center mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4 border border-green-400">
+                  <FaBrain className="text-white text-lg sm:text-xl" />
                 </div>
               </div>
-              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8 px-2 sm:px-0">
                 {ABOUT_TEXT}
               </p>
               <div className="flex items-center justify-center space-x-8">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
-                  <span className="text-sm text-gray-300 font-mono">Actively looking for opportunities!</span>
+                  <span className="text-xs sm:text-sm text-gray-300 font-mono">Actively looking for opportunities!</span>
                 </div>
               </div>
             </div>

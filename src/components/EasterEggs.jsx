@@ -186,7 +186,7 @@ const EasterEggs = ({ isLoading }) => {
               initial={{ scale: 0.8, y: 50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.8, y: 50 }}
-              className="bg-gray-800 rounded-2xl p-8 max-w-md mx-4 border border-green-400 shadow-2xl"
+              className="bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-md mx-4 border border-green-400 shadow-2xl"
             >
               <div className="text-center">
                 <motion.div
@@ -197,11 +197,11 @@ const EasterEggs = ({ isLoading }) => {
                   {tutorialStep === 0 ? '🎉' : tutorialStep === 1 ? '🎯' : tutorialStep === 2 ? '🎮' : tutorialStep === 3 ? '💻' : '🚀'}
                 </motion.div>
                 
-                <h3 className="text-xl font-bold text-white mb-4 font-mono">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-4 font-mono">
                   {tutorialSteps[tutorialStep].title}
                 </h3>
                 
-                <p className="text-gray-300 mb-6">
+                <p className="text-sm sm:text-base text-gray-300 mb-6">
                   {tutorialSteps[tutorialStep].content}
                 </p>
                 
@@ -225,35 +225,35 @@ const EasterEggs = ({ isLoading }) => {
       </AnimatePresence>
 
       {/* Visible Easter Egg Buttons */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: showTutorial ? 0 : 2 }}
-        onClick={handleSecretClick}
-        className="fixed top-4 right-4 w-16 h-16 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center cursor-pointer z-40 shadow-lg border-2 border-green-400"
-        title="Click me 5 times for a surprise! 🎉"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <span className="text-white text-2xl">🎯</span>
-        <motion.div
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute inset-0 bg-green-400 rounded-full opacity-20"
-        />
-      </motion.div>
+                        <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: showTutorial ? 0 : 2 }}
+                    onClick={handleSecretClick}
+                    className="fixed top-16 right-3 sm:top-20 sm:right-4 w-12 h-12 sm:w-16 sm:h-16 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center cursor-pointer z-40 shadow-lg border-2 border-green-400"
+                    title="Click me 5 times for a surprise! 🎉"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <span className="text-white text-lg sm:text-2xl">🎯</span>
+                    <motion.div
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="absolute inset-0 bg-green-400 rounded-full opacity-20"
+                    />
+                  </motion.div>
       
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: showTutorial ? 0 : 2.5 }}
         onClick={handleSecretClick}
-        className="fixed bottom-4 left-4 w-16 h-16 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center cursor-pointer z-40 shadow-lg border-2 border-blue-400"
+        className="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center cursor-pointer z-40 shadow-lg border-2 border-blue-400"
         title="Easter egg zone! 🥚"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <span className="text-white text-2xl">🥚</span>
+        <span className="text-white text-lg sm:text-2xl">🥚</span>
         <motion.div
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
@@ -266,7 +266,7 @@ const EasterEggs = ({ isLoading }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: showTutorial ? 0 : 3 }}
-        className="fixed bottom-4 right-4 bg-gray-800 border border-gray-600 rounded-lg p-4 text-sm text-gray-300 font-mono z-40 max-w-xs"
+        className="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 bg-gray-800 border border-gray-600 rounded-lg p-2 sm:p-3 text-xs sm:text-sm text-gray-300 font-mono z-40 max-w-[240px] sm:max-w-[280px] md:max-w-xs"
       >
         <div className="text-green-400 mb-2 font-bold">🎮 Konami Code:</div>
         <div className="text-gray-400 mb-2">Press these keys in order:</div>
