@@ -1,115 +1,90 @@
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaTrophy, FaUsers } from 'react-icons/fa'; // Icons for education, awards, and activities
-import { ABOUT_TEXT } from '../constants/index.js'; // About text from constants
+import { FaGraduationCap, FaTrophy, FaUsers, FaCode, FaRocket, FaBrain, FaHeart } from 'react-icons/fa';
+import { ABOUT_TEXT } from '../constants/index.js';
 
 const About = () => {
+
+  const skillsData = [
+    { category: "Languages", skills: ["JavaScript", "TypeScript", "Python", "Go", "Java", "SQL"], color: "blue" },
+    { category: "Frameworks", skills: ["React", "React Native", "Node.js", "Flask", "Django", "Spring Boot"], color: "green" },
+    { category: "DevOps & Tools", skills: ["Azure DevOps", "AWS", "Docker", "Git", "GitHub", "Figma"], color: "purple" },
+    { category: "Databases", skills: ["PostgreSQL", "MySQL"], color: "pink" }
+  ];
+
   return (
-    <div className="w-full h-full mx-0 px-0 flex flex-col justify-center items-center bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100">
-      {/* Section Title */}
-      <h1 className="my-10 text-center text-5xl font-bold text-pink-600">
-        About <span className="text-purple-600">Me</span> 💖
-      </h1>
+    <section id="about" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-mono">
+            About Me
+          </h2>
+          <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            A journey through technology, innovation, and continuous learning
+          </p>
+        </motion.div>
 
-      {/* Main Layout: Left and Right Columns with margin */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-10">
-        {/* Left Column: Education and Awards */}
-        <div className="space-y-8">
-          {/* Education Bubble */}
-          <motion.div 
-            whileInView={{ opacity: 1, x: 0 }} 
-            initial={{ opacity: 0, x: -100 }} 
-            transition={{ duration: 0.5 }} 
-            className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 border-4 border-pink-300 mx-10"
-          >
-            <FaGraduationCap className="text-6xl text-purple-400 mb-4" />
-            <h3 className="text-3xl font-semibold text-pink-500 mb-2">Education 🎓</h3>
-            <div className="space-y-4 text-left w-full">
-              <div>
-                <h4 className="font-semibold text-purple-600">B.Sc in Computer Science @ UW-Madison</h4>
-                <div className="flex justify-between text-gray-500 italic">
-                  <span>2023 - Present</span>
+        {/* Main Story Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <div className="bg-gray-800 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto border border-gray-700">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mr-4 border border-green-400">
+                  <FaBrain className="text-white text-xl" />
                 </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-purple-600">B.Sc in Computer Science @ ASU</h4>
-                <div className="flex justify-between text-gray-500 italic">
-                  <span>2021 - 2023</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Awards Bubble */}
-          <motion.div 
-            whileInView={{ opacity: 1, x: 0 }} 
-            initial={{ opacity: 0, x: -100 }} 
-            transition={{ duration: 0.5 }} 
-            className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 border-4 border-purple-300 mx-10"
-          >
-            <FaTrophy className="text-6xl text-yellow-500 mb-4" />
-            <h3 className="text-3xl font-semibold text-purple-500 mb-2">Awards 🏆</h3>
-            <div className="space-y-3 text-left w-full">
-              {/* List of Awards */}
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Notable Capital NextGen Fellow Apprenticeship</h4>
-                <span className="text-gray-500">2024</span>
-              </div>
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Anita B.org Grace Hopper Celebration (GHC)</h4>
-                <span className="text-gray-500">2023</span>
-              </div>
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Spring 2023 Dean’s List</h4>
-                <span className="text-gray-500">2023</span>
-              </div>
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Fall 2022 Dean’s List</h4>
-                <span className="text-gray-500">2022</span>
-              </div>
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Spring 2022 Dean’s List</h4>
-                <span className="text-gray-500">2022</span>
-              </div>
-              <div className="flex justify-between">
-                <h4 className="font-semibold text-pink-600">Fall 2021 Dean’s List</h4>
-                <span className="text-gray-500">2021</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Right Column: About Me and Clubs & Activities */}
-        <div className="space-y-8">
-          {/* About Me Text */}
-          <motion.div 
-            whileInView={{ opacity: 1, y: 0 }} 
-            initial={{ opacity: 0, y: 100 }} 
-            transition={{ duration: 0.5 }} 
-            className="bg-white shadow-lg rounded-2xl p-6 border-4 border-pink-300 mx-10"
-          >
-            <div className="flex justify-center">
-              <p className="max-w-4xl text-lg text-pink-700 text-justify">
+              <p className="text-lg text-gray-300 leading-relaxed mb-8">
                 {ABOUT_TEXT}
               </p>
+              <div className="flex items-center justify-center space-x-8">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                  <span className="text-sm text-gray-300 font-mono">Actively looking for opportunities!</span>
+                </div>
+              </div>
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Clubs & Activities Bubble */}
-          <motion.div 
-            whileInView={{ opacity: 1, y: 0 }} 
-            initial={{ opacity: 0, y: 100 }} 
-            transition={{ duration: 0.5 }} 
-            className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 border-4 border-purple-300 mx-10"
-          >
-            <FaUsers className="text-6xl text-green-400 mb-4" />
-            <h3 className="text-3xl font-semibold text-purple-500 mb-2">Clubs & Activities ✨</h3>
-            <p className="text-gray-600 text-justify">
-              🌟 Website Director of The Vault UW-Madison. 🌟 Volunteered as a mentor for intermediate programmers, fostering a supportive learning environment. 🌟 Organized coding workshops to introduce peers to the basics of web development.🌟<br />
-            </p>
-          </motion.div>
-        </div>
+
+        {/* Stats Section
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {[
+            { number: "6", label: "Work Experiences" },
+            { number: "20+", label: "Technologies" },
+            { number: "2", label: "Projects" },
+            { number: "5", label: "Awards" }
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="text-center bg-gray-50 rounded-2xl p-6"
+            >
+              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div> */}
       </div>
-    </div>
+    </section>
   );
 };
 

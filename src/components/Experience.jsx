@@ -1,80 +1,106 @@
 import React from "react";
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import { FaMapMarkerAlt, FaCalendarAlt, FaCode } from "react-icons/fa";
 
 const Experience = () => {
   return (
-    <div className="pb-12 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100 py-16">
-      {/* Section Title */}
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-5xl font-extrabold text-pink-600"
-      >
-        Experience 💼
-      </motion.h1>
+    <section id="experience" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-mono">
+            Work Experience
+          </h2>
+          <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Professional journey and technical achievements
+          </p>
+        </motion.div>
 
-      <div className="max-w-screen-xl mx-auto px-4">
-        {EXPERIENCES.map((experience, index) => (
-          <div
-            key={index}
-            className="mb-12 flex flex-wrap lg:justify-center bg-white rounded-2xl shadow-lg p-8 border-2 border-purple-100 hover:shadow-2xl transition-shadow duration-300"
-          >
-            {/* Experience Year */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4 mb-4 lg:mb-0"
-            >
-              <p className="mb-2 text-sm font-semibold text-purple-400">
-                {experience.year}
-              </p>
-            </motion.div>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-green-400 hidden lg:block"></div>
 
-            {/* Experience Details */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              {/* Role */}
-              <h6 className="mb-2 block text-2xl font-semibold text-pink-600">
-              {experience.company}
-              </h6>
+          <div className="space-y-12">
+            {EXPERIENCES.map((experience, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-6 w-4 h-4 bg-green-400 rounded-full border-4 border-gray-900 shadow-lg hidden lg:block"></div>
 
-              {/* Company Name */}
-              <span className="mb-2 text-lg font-medium text-purple-600">
-              {experience.role}{" "}
-              </span>
+                {/* Experience Card */}
+                <div className="lg:ml-20 bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-700 hover:shadow-2xl transition-all duration-300 group">
+                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors font-mono">
+                        {experience.role}
+                      </h3>
+                      <h4 className="text-xl font-semibold text-green-400 mb-2 font-mono">
+                        {experience.company}
+                      </h4>
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
+                        <div className="flex items-center gap-1">
+                          <FaCalendarAlt className="text-green-400" />
+                          <span className="font-mono">{experience.year}</span>
+                        </div>
+                        {experience.location && (
+                          <div className="flex items-center gap-1">
+                            <FaMapMarkerAlt className="text-green-400" />
+                            <span className="font-mono">{experience.location}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
 
-              {/* Description */}
-              <p className="mb-4 text-gray-600">
-                <ul>
-                  {experience.description.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-              </p>
+                  {/* Description */}
+                  <div className="mb-6">
+                    <ul className="space-y-3">
+                      {experience.description.map((point, pointIndex) => (
+                        <li key={pointIndex} className="flex items-start">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <p className="text-gray-300 leading-relaxed">{point}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-              {/* Technologies Used */}
-              <div className="flex flex-wrap">
-                {experience.technologies.map((technology, index) => (
-                  <span
-                    key={index}
-                    className="mr-2 mb-2 rounded-full bg-pink-100 px-3 py-1 text-sm font-medium text-pink-700 shadow-sm"
-                  >
-                    {technology}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+                  {/* Technologies */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <FaCode className="text-green-400" />
+                      <span className="text-sm font-medium text-gray-300 font-mono">Technologies Used</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.technologies.map((technology, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium border border-gray-600 hover:bg-gray-600 transition-all duration-200 font-mono"
+                        >
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

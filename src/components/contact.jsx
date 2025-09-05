@@ -4,73 +4,118 @@ import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+
+  const contactMethods = [
+    {
+      icon: FaEnvelope,
+      title: "Email",
+      value: CONTACT.email,
+      href: `mailto:${CONTACT.email}`,
+      color: "text-pink-500",
+      bgColor: "bg-pink-100"
+    },
+    {
+      icon: FaPhone,
+      title: "Phone",
+      value: CONTACT.phone,
+      href: `tel:${CONTACT.phone}`,
+      color: "text-purple-500",
+      bgColor: "bg-purple-100"
+    },
+    {
+      icon: FaMapMarkerAlt,
+      title: "Location",
+      value: CONTACT.address,
+      href: null,
+      color: "text-blue-500",
+      bgColor: "bg-blue-100"
+    },
+    {
+      icon: FaLinkedin,
+      title: "LinkedIn",
+      value: "Connect with me",
+      href: CONTACT.linkedin,
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
+    }
+  ];
+
   return (
-    <div className="pb-20 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100 py-16">
-      {/* Section Title */}
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-10 text-center text-5xl font-extrabold text-pink-600"
-      >
-        Get in Touch 💌
-      </motion.h1>
-
-      {/* Contact Information */}
-      <div className="max-w-screen-md mx-auto text-center tracking-tighter bg-white rounded-2xl shadow-lg p-8 border-2 border-purple-100">
+    <section id="contact" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center my-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <FaMapMarkerAlt className="text-4xl text-purple-500 mb-2" />
-          <p className="text-lg text-gray-600">{CONTACT.address}</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-mono">
+            Let's Connect
+          </h2>
+          <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            I'm always excited to discuss new opportunities, collaborate on projects, or just have a chat about technology!
+          </p>
         </motion.div>
 
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center my-6"
-        >
-          <FaPhone className="text-4xl text-pink-500 mb-2" />
-          <p className="text-lg text-gray-600">{CONTACT.phone}</p>
-        </motion.div>
-
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center my-6"
-        >
-          <FaEnvelope className="text-4xl text-yellow-500 mb-2" />
-          <a
-            href={`mailto:${CONTACT.email}`}
-            className="text-lg text-gray-600 hover:text-yellow-600 transition-colors"
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Methods */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
           >
-            {CONTACT.email}
-          </a>
-        </motion.div>
+            <h3 className="text-2xl font-bold text-white mb-8 font-mono text-center">Get in Touch</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {contactMethods.map((method, index) => (
+                <motion.div
+                  key={method.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="group"
+                >
+                  {method.href ? (
+                    <a
+                      href={method.href}
+                      target={method.href.startsWith('http') ? '_blank' : '_self'}
+                      rel={method.href.startsWith('http') ? 'noopener noreferrer' : ''}
+                      className="flex items-center p-6 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 border border-gray-600">
+                        <method.icon className="text-xl text-green-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white group-hover:text-green-400 transition-colors font-mono">
+                          {method.title}
+                        </h4>
+                        <p className="text-gray-300">{method.value}</p>
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="flex items-center p-6 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 hover:shadow-xl transition-all duration-300 group">
+                      <div className="w-12 h-12 bg-gray-700 rounded-xl flex items-center justify-center mr-4 border border-gray-600 group-hover:scale-110 transition-transform duration-300">
+                        <method.icon className="text-xl text-green-400" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white group-hover:text-green-400 transition-colors font-mono">{method.title}</h4>
+                        <p className="text-gray-300">{method.value}</p>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
 
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col items-center my-6"
-        >
-          <FaLinkedin className="text-4xl text-blue-600 mb-2" />
-          <a
-            href={CONTACT.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            LinkedIn Profile
-          </a>
-        </motion.div>
+        
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

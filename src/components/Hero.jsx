@@ -1,82 +1,116 @@
 import profilepic from "../assets/image.jpg";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useTypewriter } from "react-simple-typewriter"; // Import the useTypewriter hook
-
+import { useTypewriter } from "react-simple-typewriter";
+import CodingAvatar from "./CodingAvatar";
+import InteractiveBackground from "./InteractiveBackground";
 
 const Hero = () => {
-  // Using the typewriter hook to manage the words to cycle through
   const [text] = useTypewriter({
-    words: ["Software Engineer", "Tech Enthusiast", "Creative Coder"],
-    loop: true, // Loop infinitely
-    typeSpeed: 100, // Typing speed
-    deleteSpeed: 50, // Speed at which text gets deleted
-    delaySpeed: 1500, // Delay between typing and deletion
+    words: ["Software Engineer", "Full-Stack Developer", "Tech Innovator"],
+    loop: true,
+    typeSpeed: 80,
+    deleteSpeed: 50,
+    delaySpeed: 2000,
   });
 
   return (
-    <div className="w-full h-full mx-0 px-0 flex flex-col justify-center items-center text-center bg-gradient-to-r from-pink-300 via-purple-200 to-pink-300">
-      {/* Profile Image */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        className="rounded-full w-68 h-68 lg:w-80 lg:h-100 object-cover overflow-hidden shadow-2xl border-8 border-pink-300"
-      >
-        <img
-          src={profilepic}
-          alt="Sohalliya Jain"
-          className="rounded-full w-64 h-64 lg:w-80 lg:h-80 object-cover"
-        />
-      </motion.div>
+    <div className="min-h-screen w-full flex flex-col justify-center items-center text-center bg-gray-900 relative overflow-hidden">
+      {/* Interactive Background */}
+      <InteractiveBackground />
 
-      {/* Hero Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-gray-800"
-      >
-        <p className="text-2xl font-light text-gray-600 mb-3">Hey there, I'm</p>
-        <h1 className="text-6xl font-extrabold text-pink-600 mt-2">
-          Sohalliya Jain 🎀
-        </h1>
-        <h2 className="text-4xl text-purple-700 font-semibold mt-5 italic">
-          {/* Typing animation */}
-          <span>{text}</span>
-          <span className="text-pink-500 animate-pulse">|</span> {/* Cursor effect */}
-        </h2>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col justify-center min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Hero Text - Left Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-8 text-center lg:text-left"
+          >
+            <div className="space-y-4">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                <p className="text-lg font-medium text-gray-300 tracking-wide uppercase font-mono">
+                  Software Developmer
+                </p>
+              </div>
+              
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight font-mono">
+                Sohalliya Jain
+              </h1>
+              
+              <div className="h-16 flex items-center justify-center lg:justify-start">
+                <h2 className="text-xl lg:text-2xl font-medium text-gray-300 min-h-[2.5rem] flex items-center font-mono">
+                  <span className="text-green-400">I am a&nbsp;</span>
+                  <span className="text-white font-semibold min-w-[200px] lg:min-w-[250px] text-left">
+                    {text}
+                    <span className="text-green-400 animate-pulse ml-1">|</span>
+                  </span>
+                </h2>
+              </div>
+            </div>
 
-        {/* Call to Action Buttons */}
-        <div className="mt-10 space-x-4">
-          <a
-            href="https://drive.google.com/file/d/1LCMe0ZgYC6yGA3YYuJ3B6-UU7CAXrz4Y/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 bg-pink-600 text-white rounded-full font-semibold hover:bg-pink-500 transition-colors"
+            <p className="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Developer passionate about building systems that last and tech that matters
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              <a
+                href="https://drive.google.com/file/d/1LCMe0ZgYC6yGA3YYuJ3B6-UU7CAXrz4Y/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors duration-200 font-mono"
+              >
+                <FaDownload className="text-sm" />
+                Download Resume
+              </a>
+              
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200 font-mono"
+              >
+                Get In Touch
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="flex justify-center lg:justify-start pt-4 space-x-4"
+            >
+              <a
+                href="https://www.linkedin.com/in/sohalliya-jain/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200 border border-gray-600"
+              >
+                <FaLinkedin className="text-xl text-gray-300" />
+              </a>
+              
+              <a
+                href="https://github.com/sohalliya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200 border border-gray-600"
+              >
+                <FaGithub className="text-xl text-gray-300" />
+              </a>
+            </motion.div>
+          </motion.div>
+
+          {/* Coding Avatar - Right Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex justify-center lg:justify-end"
           >
-           Resume
-          </a>
-          <a
-            href="#contact"
-            className="px-5 py-4 bg-pink-600 text-white rounded-full font-semibold hover:bg-pink-500 transition-colors"
-          >
-            Contact Info
-          </a>
+            <CodingAvatar />
+          </motion.div>
         </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center mt-8 space-x-6 text-3xl">
-          <a
-            href="https://www.linkedin.com/in/sohalliya-jain/"
-            target="_blank"
-            rel="noopener noreferrer"
-            // className="hover:text-pink-500 transition-colors"
-          >
-            <FaLinkedin className="text-4xl text-blue-600 mb-2" />
-          </a>
-        </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -1,75 +1,85 @@
 export const HERO_CONTENT = `Aspiring Software Engineer dedicated to making a meaningful impact in the tech industry.`
-export const ABOUT_TEXT = `I’m a Computer Science senior at UW-Madison, graduating May'25, with a passion for software engineering, AR/VR, and AI. I’ve built scalable, user-centric solutions at Handshake, Holos, and The Vault UW-Madison, recently developing an AR/VR office hours platform for Apple Vision Pro using Swift, visionOS, SharePlay and WebXR to enhance student engagement.
-I thrive in fast-paced environments, love solving complex problems, and am always eager to learn. I’m seeking a full-time Software Engineering role to create innovative and impactful technology.`;
+export const ABOUT_TEXT = `I’m a Software Development Engineer at Beyondsoft, where I design and scale full-stack applications, optimize backend systems, and build secure REST APIs that serve thousands of enterprise users. I recently graduated with a B.S. in Computer Science from the University of Wisconsin–Madison.
+Over the years, I’ve worked across startups and enterprise teams, from engineering Coco GenAI at Handshake, a generative AI-powered writing tool which served 1M+ users, to improving system performance, data pipelines, and CI/CD workflows that cut deployment times by over 60%.
+I love building products that combine clean engineering, scalable architecture, and user-focused design. Whether it’s optimizing databases, crafting modular React frontends, or integrating GenAI into real-world tools, I thrive on solving complex problems and delivering technology that makes an impact.`;
 
 export const EXPERIENCES = [
   {
-    year: "January 2025 - Present",
+    year: "June 2025 - Present",
+    role: "Software Development Engineer",
+    company: "Beyondsoft",
+    location: "Schaumburg, IL",
+    description: [
+      "• Orchestrate a configurable task management platform, improving team collaboration efficiency by 40%.",
+      "• Manage and optimize PostgreSQL databases, ensuring scalable and reliable data storage across enterprise use cases.",
+      "• Optimized Django backend endpoints to enhance web performance, cutting load times by 35%.",
+      "• Construct secure Django APIs and scalable data models with role-based access for 1,000+ enterprise users.",
+      "• Craft a modular React frontend with real-time analytics dashboards, elevating user engagement by 30%.",
+      "• Streamline CI/CD pipelines using Docker and Azure DevOps, reducing deployment time by 60%."
+    ],
+    technologies: ["Django", "React", "PostgreSQL", "Docker", "Azure DevOps", "Python"]
+  },
+  {
+    year: "January 2025 - May 2025",
     role: "Software Engineering Intern",
     company: "Holos",
+    location: "Madison, WI",
     description: [
-      "~ Created an AR/VR office hours platform for Apple Vision Pro using Swift, visionOS, SharePlay.",
-      "~ Integrated collaboration tools like a whiteboard, screen capture, video sharing, and 360° model viewing to enhance the immersive learning experience.",
-      "~ Enabled immersive session recording (audio and screen) using AVFoundation, with real-time status feedback.",
-      "~ Engineered real-time conversational AI using OpenAI (ChatGPT for dialogue, Whisper for speech-to-text), AVFoundation, and Apple’s Speech framework, enabling natural voice interaction."
+      "• Implemented an immersive Apple Vision Pro AR app adopting visionOS and SharePlay, enabling 5+ concurrent collaborative sessions.",
+      "• Synchronized AVFoundation with Speech API to ensure high-fidelity audio capture and transcription.",
+      "• Integrated OpenAI GPT + Whisper to deliver real-time conversational AI, raising engagement by 45%.",
+      "• Followed Agile sprints and used Git for version control across multi-platform teams."
     ],
-    technologies: ["Swift", "visionOS", "SharePlay", "ReplayKit", "OpenAI", "AVFoundation"]
+    technologies: ["Swift", "visionOS", "SharePlay", "AVFoundation", "OpenAI", "Git"]
   },
   {
-      year: "October 2024 - Present",
-      role: "Website Director",
-      company: "The Vault UW-Madison",
-      description: [
-        "~ Directed the development of a high-performance web platform using React, TypeScript, and Python, boosting engagement by 25%.",
-        "~ Designed scalable architectures, implemented efficient REST APIs, and enhanced UI accessibility to improve the overall user experience.",
-        "~ Collaborated with cross-functional teams to deliver features aligned with the mission of community engagement, ensuring impactful user interactions."
-      ],
-      technologies: ["React", "TypeScript", "Python"]
+    year: "October 2024 - May 2025",
+    role: "Website Director",
+    company: "The Vault UW Madison",
+    location: "Madison, WI",
+    description: [
+      "• Refactored the site architecture utilizing React, TypeScript, and Python, increasing traffic by 25%.",
+      "• Devised maintainable REST APIs that decreased frontend-backend sync time by 40%.",
+      "• Improved user retention by 20% by championing UX redesigns based on usability testing insights."
+    ],
+    technologies: ["React", "TypeScript", "Python", "REST APIs"]
   },
   {
-      year: "June 2024 - August 2024",
-      role: "Full-Stack Software Engineering Intern",
-      company: "Handshake",
-      description: [
-        "~ Engineered Coco, a GenAI-powered tone enhancement tool, leveraging Python, React, and TypeScript improving real-time profile summary personalization for millions of U.S. users.",
-        "~ Boosted feature adoption to 70%+ and scaled AI summaries by 50%, driving a planned expansion in Europe.",
-        "~ Led QA testing and user research to refine UI/UX, ensuring accessibility, responsiveness, and secure data handling across browsers and devices.",
-        "~ Optimized LLM/GenAI responses via scalable architecture and refactored API endpoints using Go, Ruby, and GraphQL, refining performance while reducing latency "
-      ],
-      technologies: ["Python", "React", "TypeScript", "Go", "Ruby", "GraphQL"]
+    year: "June 2024 - August 2024",
+    role: "Full Stack Software Engineer Intern",
+    company: "Handshake",
+    location: "San Francisco, CA",
+    description: [
+      "• Headed development of Coco GenAI, a GenAI-powered tone enhancer serving 1M+ users, leveraging React, TypeScript, and Python.",
+      "• Boosted feature adoption by 70%, improved AI summary accuracy by 50%, enabling global readiness.",
+      "• Directed cross-platform QA and accessibility testing, improving compliance to 95%.",
+      "• Overhauled endpoints and deployed refactored REST APIs via GraphQL and Ruby on Rails, slashing load by 30%.",
+      "• Worked in Agile cycles with daily standups, and utilized Git for agile branching strategy and collaborative versioning."
+    ],
+    technologies: ["React", "TypeScript", "Python", "GraphQL", "Ruby on Rails", "Git"]
   },
   {
-      year: "May 2023 - July 2023",
-      role: "Software Engineering Intern",
-      company: "Sant Nirankari Charitable Foundation",
-      description: [
-        "~ Revamped website UI using React, Node.js, and Tailwind CSS, achieving 95%+ uptime and significantly improving user experience.",
-        "~ Conducted Java programming workshops for underrepresented groups, enhancing participant knowledge and fostering diversity in tech."
-      ],
-      technologies: ["React", "Node.js", "Tailwind CSS"]
+    year: "May 2023 - July 2023",
+    role: "Software Engineering Intern",
+    company: "Sant Nirankari Charitable Foundation",
+    location: "Hybrid",
+    description: [
+      "• Modernized the organization website applying React, Node.js, and Tailwind CSS, achieving 99.9% uptime.",
+      "• Delivered 4 Java workshops, educating 200+ underserved learners and raising comprehension scores by 40%."
+    ],
+    technologies: ["React", "Node.js", "Tailwind CSS", "Java"]
   },
   {
-      year: "January 2021 - May 2023",
-      role: "Teaching Assistant",
-      company: "Arizona State University",
-      description: [
-        "~ Guided 300+ students in Data Structures, Algorithms, and Linear Programming, strengthening their proficiency in complex programming concepts.",
-        "~ Provided 1-on-1 mentoring, enhancing analytical reasoning and algorithmic thinking, leading to a 40% improvement in student problem-solving skills."
-      ],
-      technologies: ["Java", "Data Structures", "Algorithms", "Linear Programming"]
-  },
-  {
-    year: "November, 2021 - May, 2023",
-    role: "Office Assistant",
+    year: "January 2022 - May 2023",
+    role: "Teaching Assistant",
     company: "Arizona State University",
+    location: "Tempe, AZ",
     description: [
-      `~ Optimized database management for 20+ college sports teams through SQL, enhancing data accuracy and consistency while reducing manual data correction efforts by 50%.`,
-      `~ Managed configuration management tasks to ensure data integrity across platforms.`,
-      `~ Delivered 3 scalable data pipelines to assist event coordinators with fetching data and storing customer records in Microsoft Office and Google Workspace.`
+      "• Mentored 300+ students in Data Structures, Algorithms, and Linear Programming, improving grades by 15%.",
+      "• Facilitated weekly office hours, boosting problem-solving skills by 40% (via practice exam outcomes)."
     ],
-    technologies: ["SQL", "Microsoft Office", "Google Workspace"],
-  },
-
+    technologies: ["Java", "Data Structures", "Algorithms", "Linear Programming"]
+  }
 ];
 
 export const PROJECTS = [
@@ -83,21 +93,20 @@ export const PROJECTS = [
   },
   {
     title: "Nets and Bets",
-    technologies: ["Java Spring Boot", "SQL", "React"],
+    technologies: ["Java", "Spring Boot", "SQL", "React"],
     description: [
-        "⭑ Built a full-stack March Madness betting simulation platform using React.js, Java Spring Boot, and MySQL.",
-        "⭑ Developed RESTful APIs for user authentication, betting logic, and game data, and designed and optimized the database for user profiles, team stats, and betting history.",
-        "⭑ Created web scraping system to pull live game stats and odds"
+        "⭑ Engineered a full-stack March Madness betting platform using React.js, Java Spring Boot, and MySQL.",
+        "⭑ Formulated REST APIs for user authentication, betting logic, and game data, while optimizing the database for user profiles, team stats, and betting history.",
+        "⭑ Applied a web scraping system to dynamically retrieve live game stats and odds, enhancing the real-time betting experience."
     ]
   },
   {
     title: "Sonic Study",
     description: [
-      `⭑ Revolutionized an accessibility-focused flashcard application using Kotlin, AWS, Python and Flask to support users with visual impairments or dyslexia, providing an innovative audio-based study solution.`,
-      `⭑ Executed core features such as voice-based input and question-answer pairing using Web Speech API, enhancing the user experience through seamless audio interactions.`
-
+      "⭑ Developed a flashcard study app using Kotlin, AWS, MySQL, and Flask to help students optimize study efficiency.",
+      "⭑ Integrated voice-based input with the Web Speech API, providing a seamless and accessible audio interaction experience."
     ],
-    technologies: [`Kotlin`, `AWS`, `Python`, `Flask`, `Web Speech API`]
+    technologies: ["Kotlin", "Room Database", "AWS", "MySQL", "Flask"]
   },
   {
     title: "Post-Stroke Recovery Application",
@@ -138,4 +147,5 @@ export const CONTACT = {
   email: "jain.sohalliya@outlook.com",
   linkedin: "https://www.linkedin.com/in/sohalliya-jain/",
   phone: "480-791-7556",
+  address: "Illinois, USA",
 };
