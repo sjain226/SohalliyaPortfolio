@@ -56,7 +56,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4 px-4 sm:px-0">
               <a
-                href="https://drive.google.com/file/d/1LCMe0ZgYC6yGA3YYuJ3B6-UU7CAXrz4Y/view?usp=sharing"
+                href="https://drive.google.com/file/d/1GMIJ_ZWG7IW3XscsvzgmBuZUyI1uoFMU/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors duration-200 font-mono text-sm sm:text-base"
